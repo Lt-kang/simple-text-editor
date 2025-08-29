@@ -4,9 +4,9 @@ import React, { useState } from 'react';
 const CleaningButton = ( { text, setText}) => {
     return (
         <button className='custom-button'
-        style={{float: 'none', marginLeft: '10px', display: 'inline-block'}}
+        // style={{float: 'none', marginLeft: '10px', display: 'inline-block'}}
         onClick={() => {
-            setText(text.replace(/\n/g, ' '));
+            setText(text.replace(/\n/g, ''));
         }}>
             Clean
         </button>
@@ -19,9 +19,9 @@ const Editor2 = () => {
 
     return (
         <div>
-            <div className='editor1-container'>
+            <div className='editor2-container'>
                 {/* Text Editor */}
-                <div className='editor1-text-editor'>
+                <div className='editor2-text-editor'>
                     <h2>LineBreak Cleaner
                         <CleaningButton text={text} setText={setText} />
                     </h2>
@@ -33,16 +33,11 @@ const Editor2 = () => {
                 </div>
 
                 {/* Preview Page */}
-                {/* <div className='editor2-preview-page'>
-                    <h2>Preview</h2>
-                    <div className='editor1-preview-page-content'>
-                    <pre style={{ fontFamily: 'inherit', margin: 0, textAlign: 'left' }}>{text}</pre>
-                    </div>
-                </div> */}
                 <div className='editor2-preview-page'>
                     <h2>Preview</h2>
                     <div className='editor2-preview-page-content'>
-                    <pre style={{ fontFamily: 'inherit', margin: 0, textAlign: 'left' }}>{text}</pre>
+                    {/* <pre style={{ fontFamily: 'inherit', margin: 0, textAlign: 'left' }}>{text}</pre> */}
+                    <div style={{ fontFamily: 'inherit', margin: 0, textAlign: 'left' }}>{text}</div>
                     </div>
                 </div>
             </div>
